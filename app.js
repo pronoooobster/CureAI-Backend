@@ -29,10 +29,20 @@ app.get('/status', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// Endpoint to send a message to the AI
-app.post('/sendMessage', (req, res) => {
-  const message = req.body.message;
-  openAiController.sendMessage(message)
+// Endpoint to send a lifestyle message to the AI
+app.post('/lifestyle', (req, res) => {
+  const sex = req.body.sex;
+  const age = req.body.age;
+  const city = req.body.city;
+  const job = req.body.job;
+  const smoker = req.body.smoker;
+  const passiveSmoker = req.body.passiveSmoker;
+  const alcohol = req.body.alcohol;
+  const physicalActivity = req.body.physicalActivity;
+  const sunExposure = req.body.sunExposure;
+  const geneticHistory = req.body.geneticHistory;
+
+  openAiController.analyzeLifestyle(sex, age, city, job, smoker, passiveSmoker, alcohol, physicalActivity, sunExposure, geneticHistory)
     .then((response) => {
       res.json({ message: response });
     })

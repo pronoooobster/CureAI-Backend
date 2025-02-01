@@ -1,0 +1,12 @@
+{
+  "sex": "Male",
+  "age": 58,
+  "city": "Houston",
+  "job": "Construction Worker",
+  "smoker": 3,
+  "passiveSmoker": 1,
+  "alcohol": 3,
+  "physicalActivity": 1,
+  "sunExposure": 4,
+  "geneticHistory": "Family history of kidney cancer and hypertension"
+}

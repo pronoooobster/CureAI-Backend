@@ -11,7 +11,7 @@ const openai = new OpenAI({
 });
 
 // Function to send a message to the AI
-const analyzeLifestyle = async (sex, age, city, job, smoker, passiveSmoker, alcohol, physicalActivity, sunExposure, geneticHistory) => {
+const analyzeLifestyle = async (sex, age, city, airPollution, smoker, passiveSmoker, alcohol, physicalActivity, sunExposure, geneticHistory) => {
   // the reply tampplate in JSON
   const reply = "{\
   cancerTypes: [\
@@ -34,7 +34,7 @@ const analyzeLifestyle = async (sex, age, city, job, smoker, passiveSmoker, alco
         - Sex of the patient \
         - Age of the patient \
         - City of residence of the patient: free desription\
-        - The patient's job: free desription \
+        - The air pollution in patients city: free desription \
         - The patient is a smoker: 0-5 value (0 - non smoker, 5 - chain smoker) \
         - The patient is a passive smoker: 0/1 \
         - The patient's alcohol consumption: 0-5 value (0 - non drinker, 5 - heavy drinker) \
@@ -49,7 +49,7 @@ const analyzeLifestyle = async (sex, age, city, job, smoker, passiveSmoker, alco
           content: `Patient's age:${age}\n
           Patient's sex: ${sex}\n
           Patient's city: ${city}\n
-          Patient's job: ${job}\n
+          Patient's job: ${airPollution}\n
           Patient is a smoker: ${smoker}\n
           Patient is a passive smoker: ${passiveSmoker}\n
           Patient's alcohol consumption: ${alcohol}\n

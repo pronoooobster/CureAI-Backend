@@ -41,7 +41,13 @@ const analyzeLifestyle = async (sex, age, city, airPollution, smoker, passiveSmo
         - The patient's physical activity: 0-5 value (0 - sedentary, 5 - very active) \
         - The patient's sun exposure: 0-5 value (0 - unhealthy, 5 - very healthy) \
         - The patient's genetic history: free desription\
-        Please ONLY provide the most likely cancer type(s) to occur in the patient from: Lung, Blood, Breast, Ovarian, Colon, Brain, Skin, Kidney, Prostate. Give a short paragraph of reasoning with each type. Advise short paragraph recommendations to improve the lifestyle. DO NOT provide any other text than specified.\
+you CAN also provide one or some of these sources in the reccomendations to the user and give the url to the user too\
+https://www.cancer.gov/ccg/research/genome-sequencing/tcga/studied-cancers\
+33 types of cancer\
+https://www.genomicsengland.co.uk/ explore how mutations influence cancer risk\
+https://gco.iarc.fr/en <— displays cancer news “in case that the patient has similar symptoms to another patient from a news article, display it and reference it.\
+https://www.ukbiobank.ac.uk/ <— Specifically focuses on risks factors, also has news\        
+Please ONLY provide the most likely cancer type(s) to occur in the patient from: Lung, Blood, Breast, Ovarian, Colon, Brain, Skin, Kidney, Prostate. Give a short paragraph of reasoning with each type. Advise short paragraph recommendations to improve the lifestyle. DO NOT provide any other text than specified.\
         ALWAYS use the following JSON format for the reply: ${reply}
         ` },
       {

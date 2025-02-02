@@ -55,9 +55,10 @@ app.post('/lifestyle', (req, res) => {
   
 // Endpoint to send an analysis message to the AI for a specific cancer type
 app.post('/cancer', (req, res) => {
+  const age = req.body.age;
   const cancerType = req.body.cancerType;
   const message = req.body.message;
-  openAiController.analyzeForCancerType(message, cancerType)
+  openAiController.analyzeForCancerType(age, message, cancerType)
     .then((response) => {
       res.json({ message: response });
     })
